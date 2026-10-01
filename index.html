@@ -105,6 +105,7 @@ section.block .sub { color: #6b7280; font-size: .9rem; margin: 0 0 16px; }
   box-shadow: 0 8px 26px rgba(20, 25, 40, .12); padding: 18px 20px;
   transform: rotateY(var(--a)) translateZ(var(--rz));
   backface-visibility: hidden; user-select: none;
+  transition: opacity .3s ease;
 }
 @media (max-width: 620px) { .scard { left: -105px; top: -85px; width: 210px; min-height: 170px; } }
 .spin-ctl { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 2px; }
@@ -271,11 +272,22 @@ document.getElementById('goYearly').addEventListener('click', function () { wind
   function target() { return scrollAng + manual; }
   function front() { return ((Math.round(-target() / STEP) % N) + N) % N; }
   /* วงล้อแนวราบ: การ์ดอยู่ระดับเดียวกัน ตำแหน่งตาม CSS */
+  /* จอแคบโชว์เฉพาะการ์ดหน้าสุด — การ์ดข้าง ๆ ซ่อน (กันกรอบซ้อนทับบนมือถือ) */
+  var cards = Array.prototype.slice.call(ring.children);
+  var narrowMQ = window.matchMedia('(max-width: 620px)');
   function paint() {
     ring.style.transform = 'rotateY(' + ang + 'deg)';
     var f = front();
     dots.forEach(function (d, i) { d.classList.toggle('active', i === f); });
+    var narrow = narrowMQ.matches;
+    cards.forEach(function (el, i) {
+      var dd = Math.abs(i - f); dd = Math.min(dd, N - dd);
+      var vis = !narrow || dd === 0;
+      el.style.opacity = vis ? '1' : '0';
+      el.style.pointerEvents = vis ? 'auto' : 'none';
+    });
   }
+  if (narrowMQ.addEventListener) narrowMQ.addEventListener('change', paint);
   /* ล็อก scroll หมุนให้ครบก่อนค่อยปล่อย (กันติด: ล็อกเฉพาะขาลง ขาขึ้นผ่านฟรีเสมอ) */
   var P = 0, locked = false, RANGE = 1400;
   function applyLock() {
