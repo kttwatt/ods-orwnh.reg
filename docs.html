@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🏥 เอกสารอ้างอิง · ODS วานรนิวาส</title>
+<title>เอกสารอ้างอิง · ODS MIS WNH</title>
 <style>
 * { box-sizing: border-box; }
 body {
@@ -11,95 +11,94 @@ body {
   font-family: "Noto Sans Thai", "Sarabun", "TH Sarabun New", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   line-height: 1.6; font-variant-numeric: tabular-nums;
 }
-.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px 64px; }
-.topnav { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 18px 0; flex-wrap: wrap; }
-.brand { font-weight: 800; font-size: 1.1rem; }
-.brand small { display: block; font-weight: 400; color: #6b7280; font-size: .8rem; }
-.topnav a.back {
-  text-decoration: none; color: #1f2530; border: 1px solid #e5e9f0; border-radius: 999px;
-  padding: 8px 18px; font-size: .88rem; font-weight: 600; white-space: nowrap; display: inline-block;
-}
-.topnav a.back.active { background: #1a1a2e; color: #fff; border-color: #1a1a2e; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px 72px; }
+a { color: #0f9488; }
 .hero { text-align: center; padding: 34px 0 8px; }
 .hero h1 { font-size: 2.2rem; margin: 0; font-weight: 800; }
-.hero p { color: #6b7280; margin: 10px 0 0; }
-.statrow { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 26px 0 8px; }
-.statbox { background: #f4f4f6; border-radius: 22px; padding: 18px 24px; text-align: center; min-width: 132px; }
-.stat-n { font-size: 1.8rem; font-weight: 800; }
-.stat-l { font-size: .86rem; font-weight: 700; margin-top: 2px; }
-.stat-s { font-size: .75rem; color: #6b7280; }
-section.block { margin-top: 40px; }
-section.block h2 { font-size: 1.3rem; margin: 0 0 4px; }
-section.block .sub { color: #6b7280; font-size: .9rem; margin: 0 0 16px; }
-.gcard { border: 1px solid #eef0f4; border-radius: 20px; padding: 18px 20px; background: #fff;
-  box-shadow: 0 2px 10px rgba(20, 25, 40, .05); }
-.gcard + .gcard { margin-top: 12px; }
-.gcard h3 { margin: 0 0 6px; font-size: 1.02rem; line-height: 1.5; }
-.muted { color: #6b7280; }
-.small { font-size: .86rem; }
-.btn {
-  border-radius: 999px; padding: 12px 26px; font-size: .92rem; font-weight: 700;
-  text-decoration: none; display: inline-block; margin: 12px 8px 0 0; font-family: inherit;
+.hero .hosp { color: #6b7280; margin: 10px 0 0; }
+.hero .expand { color: #6b7280; font-size: .86rem; margin: 4px 0 0; }
+.catabs { display: flex; gap: 8px; justify-content: center; margin: 22px 0 0; flex-wrap: wrap; }
+.catab {
+  text-decoration: none; font-weight: 700; font-size: .9rem; color: #14b8a6;
+  border: 1px solid #dfe3ea; border-radius: 999px; padding: 8px 20px; background: #fff;
 }
-.btn-dark { background: #1a1a2e; color: #fff; }
-.btn-line { background: #fff; color: #1a1a2e; border: 1px solid #dfe3ea; }
-.cite { background: #f4f4f6; border-radius: 16px; padding: 12px 14px; font-size: .9rem; margin: 8px 0 0; }
-table.map { width: 100%; border-collapse: collapse; font-size: .88rem; margin-top: 12px; }
+.catab.active { background: #14b8a6; color: #fff; border-color: #14b8a6; }
+section.block { margin-top: 38px; }
+section.block > h2 { font-size: 1.25rem; margin: 0 0 4px; }
+section.block > .sub { color: #6b7280; font-size: .9rem; margin: 0 0 14px; }
+.card { border: 1px solid #eef0f4; border-radius: 20px; padding: 20px 22px; background: #fff;
+  box-shadow: 0 2px 10px rgba(20,25,40,.05); }
+.card + .card { margin-top: 12px; }
+.card h3 { margin: 0 0 6px; font-size: 1.05rem; line-height: 1.45; }
+.muted { color: #6b7280; }
+.small { font-size: .85rem; }
+.cite { background: #f4f6f8; border-radius: 14px; padding: 12px 14px; font-size: .9rem; margin: 10px 0 0; }
+.btn {
+  border-radius: 999px; padding: 11px 24px; font-size: .92rem; font-weight: 700;
+  text-decoration: none; display: inline-block; margin: 12px 8px 0 0;
+}
+.btn-dark { background: #14b8a6; color: #fff; }
+.btn-line { background: #fff; color: #14b8a6; border: 1px solid #dfe3ea; }
+table.map { width: 100%; border-collapse: collapse; font-size: .88rem; margin-top: 14px; }
 table.map th, table.map td { border-bottom: 1px solid #eef0f4; padding: 10px 8px; text-align: left; vertical-align: top; }
-table.map th { color: #6b7280; font-weight: 700; font-size: .8rem; white-space: nowrap; }
-table.map td.pg { white-space: nowrap; font-weight: 800; }
+table.map th { color: #6b7280; font-weight: 700; font-size: .8rem; text-transform: none; white-space: nowrap; }
+table.map td.pg { white-space: nowrap; font-weight: 700; color: #0f9488; }
 ul.clean { margin: 8px 0 0; padding-left: 20px; }
 ul.clean li { margin: 6px 0; }
-footer { margin-top: 40px; font-size: .82rem; color: #6b7280; border-top: 1px solid #eef0f4; padding-top: 16px; }
+.kv { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 10px; margin-top: 12px; }
+.kv div { background: #f4f4f6; border-radius: 16px; padding: 12px 14px; text-align: center; }
+.kv b { display: block; font-size: 1.5rem; }
+.kv span { font-size: .78rem; color: #6b7280; }
+footer { margin-top: 42px; font-size: .82rem; color: #6b7280; border-top: 1px solid #eef0f4; padding-top: 16px; }
 @media (max-width: 600px) {
-  .hero { padding: 20px 0 4px; }
-  .hero h1 { font-size: 1.7rem; }
-  .gcard { padding: 14px 16px; border-radius: 18px; }
-  .statbox { padding: 14px 16px; min-width: 112px; }
-  .btn { padding: 10px 20px; font-size: .88rem; }
   table.map, table.map tbody, table.map tr, table.map td { display: block; width: 100%; }
-  table.map tr:first-child { display: none; }
-  table.map tr { border: 1px solid #eef0f4; border-radius: 16px; padding: 8px 12px; margin-bottom: 8px; }
+  table.map thead, table.map tr:first-child { display: none; }
+  table.map tr { border: 1px solid #eef0f4; border-radius: 14px; padding: 8px 12px; margin-bottom: 8px; }
   table.map td { border: 0; padding: 2px 0; }
   table.map td.pg { font-size: 1rem; }
+  table.map td:last-child { color: #374151; }
+}
+@media (max-width: 520px) {
+  .hero h1 { font-size: 1.7rem; }
+  .card { padding: 16px; border-radius: 18px; }
+  table.map th, table.map td { padding: 8px 5px; font-size: .82rem; }
+  .hero { padding: 22px 0 4px; }
 }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <div class="topnav">
-    <div class="brand">🏥 ODS วานรนิวาส<small>One Day Surgery · เอกสารอ้างอิง</small></div>
-    <div>
-      <a class="back" href="index.html">← หน้าแรก</a>
-      <a class="back" href="tables.html">← ตาราง ODS</a>
-      <a class="back active" href="docs.html">📄 เอกสาร</a>
-    </div>
-  </div>
-
   <div class="hero">
     <h1>เอกสารอ้างอิง</h1>
-    <p>ประกาศ กลุ่มโรค รหัส และที่มาของตัวเลขบนเว็บนี้</p>
+    <p class="hosp">ODS / MIS · Wanonniwat Hospital</p>
+    <p class="expand">แหล่งอ้างอิงของตัวเลขและรหัสบนเว็บนี้</p>
+    <div class="catabs">
+      <a class="catab" href="./">ODS</a>
+      <a class="catab" href="mis.html">MIS</a>
+      <a class="catab" href="groups.html">กลุ่มโรค-รหัส</a>
+      <span class="catab active">เอกสาร</span>
+    </div>
   </div>
 
   <section class="block">
-    <h2>เอกสารหลัก</h2>
+    <h2>๑. เอกสารหลัก</h2>
     <p class="sub">ประกาศที่ใช้กำหนดกลุ่มโรค รหัส และเงื่อนไขการจ่าย</p>
 
-    <div class="gcard">
+    <div class="card">
       <h3>ประกาศสำนักงานหลักประกันสุขภาพแห่งชาติ<br>เรื่อง การจ่ายค่าใช้จ่ายเพื่อบริการสาธารณสุข กรณีบริการผ่าตัดแบบวันเดียวกลับ และกรณีบริการผ่าตัดแผลเล็ก พ.ศ. ๒๕๖๗</h3>
-      <p class="small muted" style="margin:6px 0 0">
+      <p class="small muted">
         ราชกิจจานุเบกษา เล่ม ๑๔๑ ตอนพิเศษ ๓๐๔ ง หน้า ๔๘–๑๑๐ · ประกาศ ณ วันที่ ๘ พฤศจิกายน ๒๕๖๗ · รวม ๖๓ หน้า
       </p>
-      <p class="small">ใช้แทนประกาศฉบับเดิม (การผ่าตัดแบบไม่ค้างคืน / ผ่าตัดผ่านกล้อง) และเป็นฐานของตัวเลขและรหัสทั้งหมดบนเว็บนี้</p>
+      <p class="small">ใช้แทนประกาศฉบับเดิม (การผ่าตัดแบบไม่ค้างคืน / ผ่าตัดผ่านกล้อง) และเป็นฐานของทั้งหน้า ODS, MIS และหน้ากลุ่มโรค-รหัส บนเว็บนี้</p>
       <a class="btn btn-dark" href="ods-mis-2567-announcement.pdf" download>⬇ ดาวน์โหลดประกาศ (PDF ๖๓ หน้า)</a>
       <a class="btn btn-line" href="https://ratchakitcha.soc.go.th/" target="_blank" rel="noopener">ค้นหาต้นฉบับที่ราชกิจจานุเบกษา</a>
-      <p class="small muted" style="margin:10px 0 0">ไฟล์ PDF ในเว็บนี้เป็นสำเนาเพื่อการอ้างอิงภายในหน่วยงาน ต้นฉบับเผยแพร่ทางราชกิจจานุเบกษา</p>
+      <p class="small muted" style="margin-top:10px">ไฟล์ PDF ในเว็บนี้เป็นสำเนาเพื่อการอ้างอิงภายในหน่วยงาน ต้นฉบับเผยแพร่ทางราชกิจจานุเบกษา</p>
     </div>
 
-    <div class="gcard">
+    <div class="card">
       <h3>แผนที่เอกสาร (เลขหน้าพิมพ์)</h3>
-      <p class="small muted" style="margin:0">เลขหน้าในตารางนี้คือเลขหน้าพิมพ์ในราชกิจจานุเบกษา (ถ้าเปิดไฟล์ PDF: เลขหน้า PDF = เลขหน้าพิมพ์ − ๔๗)</p>
+      <p class="small muted" style="margin:0">เลขหน้าในตารางนี้คือเลขหน้าพิมพ์ในราชกิจจานุเบกษา (ถ้าเปิดไฟล์ PDF ให้ใช้ “เลขหน้า PDF = เลขหน้าพิมพ์ − ๔๗”)</p>
       <table class="map">
         <tr><th>ส่วน</th><th>หน้า</th><th>เนื้อหา</th></tr>
         <tr>
@@ -127,29 +126,30 @@ footer { margin-top: 40px; font-size: .82rem; color: #6b7280; border-top: 1px so
   </section>
 
   <section class="block">
-    <h2>เอกสารหมายเลข ๒ ในรูปแบบข้อมูล</h2>
-    <p class="sub">ตารางรหัสที่ตรวจทานจากต้นฉบับทีละรหัส</p>
-    <div class="statrow">
-      <div class="statbox"><div class="stat-n">๙๓</div><div class="stat-l">กลุ่มโรค</div><div class="stat-s">ODS ๗๐ · MIS ๒๓</div></div>
-      <div class="statbox"><div class="stat-n">๑,๓๓๑</div><div class="stat-l">แถวรหัส</div><div class="stat-s">๑,๐๙๗ รหัสไม่ซ้ำ</div></div>
-      <div class="statbox"><div class="stat-n">๔๒</div><div class="stat-l">รอตรวจต้นฉบับ</div><div class="stat-s">ส่วนใหญ่ใน ODS</div></div>
-      <div class="statbox"><div class="stat-n">๙</div><div class="stat-l">กลุ่มระบบเดียว</div><div class="stat-s">ไม่บังคับรหัสคู่</div></div>
-    </div>
-    <div class="gcard" style="margin-top:14px">
+    <h2>๒. เอกสารหมายเลข ๒ ในรูปแบบข้อมูล</h2>
+    <p class="sub">ฐานข้อมูลที่ใช้สร้างหน้ากลุ่มโรค-รหัส (ตรวจทานจากต้นฉบับทีละรหัส)</p>
+    <div class="card">
+      <div class="kv">
+        <div><b>๙๓</b><span>กลุ่มโรค (ODS ๗๐ · MIS ๒๓)</span></div>
+        <div><b>๑,๓๓๑</b><span>แถวรหัส (๑,๐๙๗ รหัสไม่ซ้ำ)</span></div>
+        <div><b>๔๒</b><span>รหัสที่ยังต้องตรวจภาพต้นฉบับ</span></div>
+        <div><b>๙</b><span>กลุ่มที่ประกาศให้ระบบเดียว</span></div>
+      </div>
       <ul class="clean small">
         <li><b>ระบบรหัส:</b> ๘๓ กลุ่มมีทั้ง ICD-10 และ ICD-9-CM · ICD-9 อย่างเดียว ๖ กลุ่ม (ODS ๑, ๒, ๓, ๔, ๖, ๖๕) · ICD-10 อย่างเดียว ๓ กลุ่ม (MIS ๑, MIS ๒, ODS ๖๒) · กลุ่มที่ไม่มีรหัสในตาราง ๑ กลุ่ม (ODS ๖๗ บริการ Appendectomy — ประกาศใช้หมายเหตุแทนรายการรหัส)</li>
         <li><b>กลุ่มที่ประกาศให้ระบบเดียว</b> ไม่บังคับมีรหัสคู่ — เคสมีรหัสของระบบที่กลุ่มนั้นระบุก็เข้าเกณฑ์</li>
-        <li><b>รหัสที่ยังไม่ยืนยัน</b> เก็บค่าที่อ่านจากต้นฉบับและรหัสทางเลือกไว้เทียบ — ห้ามใช้ยืนยันเคสก่อนเปิดภาพหน้าเอกสาร</li>
+        <li><b>ทุกแถวอ้างเลขหน้าได้</b> ใช้ช่อง “หน้า” ในหน้ากลุ่มโรค-รหัส เพื่อเปิดเทียบกับต้นฉบับ</li>
+        <li><b>รหัสที่ยังไม่ยืนยัน</b> เก็บค่าที่อ่านจากต้นฉบับ (raw) และรหัสทางเลือก (alt) ไว้เทียบ — ห้ามใช้ยืนยันเคสก่อนเปิดภาพหน้าเอกสาร</li>
       </ul>
     </div>
   </section>
 
   <section class="block">
-    <h2>ที่มาของตัวเลขบนเว็บ</h2>
-    <p class="sub">ตัวเลขทุกตัวในหน้าแรกและหน้าตารางมาจากขั้นตอนเดียวกัน</p>
-    <div class="gcard">
+    <h2>๓. ที่มาของตัวเลขเคสบนเว็บ</h2>
+    <p class="sub">ตัวเลขทุกตัวบนหน้า ODS / MIS / ตาราง มาจากขั้นตอนเดียวกัน</p>
+    <div class="card">
       <ul class="clean small">
-        <li><b>แหล่งข้อมูล:</b> ทะเบียนผ่าตัดห้องผ่าตัด รพ.วานรนิวาส (สเปรดชีตภายใน ต้องมีสิทธิ์เข้าถึง)</li>
+        <li><b>แหล่งข้อมูล:</b> ทะเบียนผ่าตัดห้องผ่าตัด รพ.วานรนิวาส (สเปรดชีตภายใน ต้องมีสิทธิ์เข้าถึง) → ไฟล์สรุปที่ใช้สร้างเว็บ</li>
         <li><b>การนับ:</b> ๑ AN = ๑ เคส · นับตาม<b>วันที่ผ่าตัด</b> · ปีงบประมาณ ต.ค.–ก.ย. (เช่น ต.ค. ๖๘–ก.ย. ๖๙ = ปีงบ ๒๕๖๙)</li>
         <li><b>สิทธิที่ตัดออก:</b> จ่ายตรง ประกันสังคม ชำระเงินเอง อปท. และต่างด้าวไม่ขึ้นทะเบียน — ไม่นับในยอด ODS/MIS</li>
         <li><b>การอ่านรหัสวินิจฉัย:</b> ใช้ Last Dx เป็นหลัก ถ้าเป็น same/ว่าง ให้ย้อนไปใช้ First Dx</li>
@@ -160,41 +160,46 @@ footer { margin-top: 40px; font-size: .82rem; color: #6b7280; border-top: 1px so
   </section>
 
   <section class="block">
-    <h2>ข้อจำกัดที่ต้องอ้างอิงกำกับทุกครั้ง</h2>
-    <div class="gcard">
+    <h2>๔. ข้อจำกัดที่ต้องอ้างอิงกำกับทุกครั้ง</h2>
+    <div class="card">
       <ul class="clean small">
         <li>ตัวเลขบนเว็บคือ <b>“จำนวนเคสตามกลุ่มโรค”</b> ไม่ใช่ “ยอดเบิกได้” — การจ่ายจริงขึ้นกับเงื่อนไขในประกาศ</li>
         <li>ข้อมูลตึกไม่มี <b>ชั่วโมงนอน (๒–๒๔ ชั่วโมง)</b>, <b>ภาวะแทรกซ้อน</b> และ <b>Discharge Type with approval</b> จึงยังตรวจเงื่อนไขข้อ ๓ ไม่ได้จากฐานข้อมูลนี้</li>
         <li>MIS ต้องมีบันทึกผ่าตัดแผลเล็กและ (กรณีโรคอ้วน) การอนุมัติก่อนผ่าตัดพร้อมค่าดัชนีมวลกาย — เอกสารเหล่านี้อยู่นอกฐานข้อมูล</li>
-        <li>รหัสที่ยังต้องตรวจ ๔๒ แถว ต้องเปิดภาพต้นฉบับยืนยันก่อนใช้ตัดสินเคส</li>
+        <li>รหัสที่ยังต้องตรวจ ๔๒ แถว (ส่วนใหญ่อยู่ใน ODS) ต้องเปิดภาพต้นฉบับยืนยันก่อนใช้ตัดสินเคส</li>
       </ul>
     </div>
   </section>
 
   <section class="block">
-    <h2>รูปแบบการอ้างอิง</h2>
+    <h2>๕. รูปแบบการอ้างอิง</h2>
     <p class="sub">คัดลอกใช้ในรายงานได้</p>
-    <div class="gcard">
+    <div class="card">
       <p class="small" style="margin:0"><b>อ้างทั้งฉบับ</b></p>
       <p class="cite">สำนักงานหลักประกันสุขภาพแห่งชาติ. ประกาศสำนักงานหลักประกันสุขภาพแห่งชาติ เรื่อง การจ่ายค่าใช้จ่ายเพื่อบริการสาธารณสุข กรณีบริการผ่าตัดแบบวันเดียวกลับ และกรณีบริการผ่าตัดแผลเล็ก พ.ศ. ๒๕๖๗. ราชกิจจานุเบกษา. ๒๕๖๗;๑๔๑(ตอนพิเศษ ๓๐๔ ง):๔๘–๑๑๐.</p>
+
       <p class="small" style="margin:14px 0 0"><b>อ้างรายกลุ่ม</b> (ตัวอย่าง ODS กลุ่ม ๑ โรคไส้เลื่อนขาหนีบ)</p>
       <p class="cite">ประกาศ สปสช. เรื่อง การจ่ายค่าใช้จ่ายเพื่อบริการสาธารณสุข กรณีบริการผ่าตัดแบบวันเดียวกลับ และกรณีบริการผ่าตัดแผลเล็ก พ.ศ. ๒๕๖๗, เอกสารหมายเลข ๒, หน้า ๕๖.</p>
+
       <p class="small" style="margin:14px 0 0"><b>อ้างเงื่อนไขการจ่าย</b></p>
       <p class="cite">ประกาศ สปสช. (๒๕๖๗), หมวด ๑ ข้อ ๓, หน้า ๔๙.</p>
     </div>
   </section>
 
   <section class="block">
-    <h2>ลิงก์หน่วยงาน</h2>
-    <div class="gcard small">
+    <h2>๖. ลิงก์หน่วยงาน</h2>
+    <div class="card small">
       <ul class="clean">
         <li><a href="https://ratchakitcha.soc.go.th/" target="_blank" rel="noopener">ราชกิจจานุเบกษา</a> — ต้นฉบับประกาศ</li>
         <li><a href="https://www.nhso.go.th/" target="_blank" rel="noopener">สำนักงานหลักประกันสุขภาพแห่งชาติ (สปสช.)</a> — ประกาศ/แนวทางที่เกี่ยวข้อง</li>
+        <li><a href="groups.html">กลุ่มโรค-รหัส (เว็บนี้)</a> — ตารางรหัสพร้อมเลขหน้าอ้างอิง</li>
       </ul>
     </div>
   </section>
 
-  <footer>หน้านี้รวบรวมเฉพาะเอกสารที่ใช้ยืนยันตัวเลขและรหัสบนเว็บ · อัปเดตล่าสุด ๘ พ.ย. ๒๕๖๙</footer>
+  <footer>
+    หน้านี้รวบรวมเฉพาะเอกสารที่ใช้ยืนยันตัวเลขและรหัสบนเว็บ · อัปเดตล่าสุด ๘ พ.ย. ๒๕๖๙
+  </footer>
 
 </div>
 </body>
