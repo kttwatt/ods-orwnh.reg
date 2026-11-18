@@ -15,6 +15,7 @@ body {
 .hero { text-align: center; padding: 34px 0 8px; }
 .hero h1 { font-size: 2.2rem; margin: 0; font-weight: 800; }
 .hero .hosp { color: #6b7280; margin: 10px 0 0; }
+.hero .expand { color: #6b7280; font-size: .9rem; margin: 2px 0 12px; }
 .catabs { display: flex; gap: 8px; justify-content: center; margin: 22px 0 0; flex-wrap: wrap; }
 .catab {
   text-decoration: none; font-weight: 700; font-size: .9rem; color: #14b8a6;
@@ -40,6 +41,65 @@ footer { margin-top: 42px; font-size: .82rem; color: #6b7280; border-top: 1px so
   .btn { display: block; text-align: center; margin: 12px 0 0; }
 }
 </style>
+<style id="ods-shared-nav">
+/* ── shared hero geometry (identical on every page) ───────── */
+.hero, header.hd { text-align: center; padding: 34px 0 0; background: #fff; border-bottom: 0; }
+header.hd .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+.hero h1, header.hd h1 {
+  font-size: 35px; line-height: 1.2; font-weight: 800; margin: 0; color: #1f2530;
+}
+.hero .hosp, header.hd .sub {
+  font-size: 18px; font-weight: 700; color: #6b7280; margin: 4px 0 0;
+}
+.hero .expand, header.hd .sub2 {
+  font-size: 14px; font-weight: 400; color: #6b7280; margin: 2px 0 0;
+}
+/* ── shared tab bar ───────────────────────────────────────── */
+.catabs.hero-tabs {
+  display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+  margin: 20px 0 10px; padding: 0;
+}
+.catabs.hero-tabs .catab {
+  font-family: inherit; font-weight: 700; font-size: 16px; line-height: 1.2;
+  color: #1f2530; background: #fff; border: 1px solid #dfe3ea; border-radius: 999px;
+  padding: 12px 26px; text-decoration: none; white-space: nowrap;
+  transition: background .18s ease, border-color .18s ease, color .18s ease, box-shadow .18s ease;
+}
+.catabs.hero-tabs .catab:hover {
+  background: #f0fdfa; border-color: #99f6e4; color: #0f766e;
+}
+.catabs.hero-tabs .catab.active {
+  background: #14b8a6; border-color: #14b8a6; color: #fff;
+  box-shadow: 0 6px 16px rgba(20, 184, 166, .28);
+}
+@media (max-width: 600px) {
+  .catabs.hero-tabs { gap: 7px; margin: 18px 0 8px; }
+  .catabs.hero-tabs .catab { font-size: 14px; padding: 10px 16px; }
+}
+@media (max-width: 520px) {
+  .hero, header.hd { padding: 22px 0 0; }
+  .hero h1, header.hd h1 { font-size: 27px; }
+  .hero .expand, header.hd .sub2 { font-size: 13px; }
+}
+@media (max-width: 380px) {
+  .catabs.hero-tabs .catab { font-size: 13px; padding: 9px 12px; }
+}
+/* ── seamless page change (cross-document view transition) ── */
+@view-transition { navigation: auto; }
+@keyframes odsFadeIn  { from { opacity: 0; } }
+@keyframes odsFadeOut { to   { opacity: 0; } }
+::view-transition-old(root) { animation: odsFadeOut .15s ease both; }
+::view-transition-new(root) { animation: odsFadeIn  .22s ease both; }
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
+  ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+}
+</style>
+<link rel="prefetch" href="index.html">
+<link rel="prefetch" href="mis.html">
+<link rel="prefetch" href="groups.html">
+<link rel="prefetch" href="docs.html">
+<link rel="prefetch" href="tables.html">
 </head>
 <body>
 <div class="wrap">
@@ -47,12 +107,13 @@ footer { margin-top: 42px; font-size: .82rem; color: #6b7280; border-top: 1px so
   <div class="hero">
     <h1>เอกสาร</h1>
     <p class="hosp">ODS / MIS · Wanonniwat Hospital</p>
-    <div class="catabs">
-      <a class="catab" href="./">ODS</a>
-      <a class="catab" href="mis.html">MIS</a>
-      <a class="catab" href="groups.html">กลุ่มโรค-รหัส</a>
-      <span class="catab active">เอกสาร</span>
-    </div>
+    <p class="expand">เอกสารอ้างอิงของตัวเลขและรหัสบนเว็บนี้</p>
+    <nav class="catabs hero-tabs" aria-label="หมวดหน้า">
+  <a class="catab" href="./">ODS</a>
+  <a class="catab" href="mis.html">MIS</a>
+  <a class="catab" href="groups.html">กลุ่มโรค-รหัส</a>
+  <span class="catab active" aria-current="page">เอกสาร</span>
+</nav>
   </div>
 
   <section class="block">

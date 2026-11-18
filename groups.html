@@ -42,13 +42,8 @@ code, .code { font-family: ui-monospace, "Consolas", "Menlo", monospace; font-va
 
 /* ---------- header ---------- */
 .hd { background: var(--card); border-bottom: 0; padding: 18px var(--s4) 0; }
-.hd .hdrow { display: flex; align-items: center; justify-content: space-between; gap: var(--s3); flex-wrap: wrap; }
 .hd h1 { margin: 0; font-size: 18px; line-height: 1.35; font-weight: 800; color: var(--ink); }
 .hd .sub { margin: var(--s1) 0 0; font-size: 13px; color: var(--muted); }
-.hd .navlink {
-  text-decoration: none; color: var(--ink); border: 1px solid #e5e9f0; border-radius: var(--r-pill);
-  padding: 8px 18px; font-size: .88rem; font-weight: 600; white-space: nowrap;
-}
 
 .wrap { max-width: 1200px; margin: 0 auto; padding: var(--s4); }
 
@@ -172,18 +167,79 @@ body.lock { overflow: hidden; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
 </style>
+<style id="ods-shared-nav">
+/* ── shared hero geometry (identical on every page) ───────── */
+.hero, header.hd { text-align: center; padding: 34px 0 0; background: #fff; border-bottom: 0; }
+header.hd .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+.hero h1, header.hd h1 {
+  font-size: 35px; line-height: 1.2; font-weight: 800; margin: 0; color: #1f2530;
+}
+.hero .hosp, header.hd .sub {
+  font-size: 18px; font-weight: 700; color: #6b7280; margin: 4px 0 0;
+}
+.hero .expand, header.hd .sub2 {
+  font-size: 14px; font-weight: 400; color: #6b7280; margin: 2px 0 0;
+}
+/* ── shared tab bar ───────────────────────────────────────── */
+.catabs.hero-tabs {
+  display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+  margin: 20px 0 10px; padding: 0;
+}
+.catabs.hero-tabs .catab {
+  font-family: inherit; font-weight: 700; font-size: 16px; line-height: 1.2;
+  color: #1f2530; background: #fff; border: 1px solid #dfe3ea; border-radius: 999px;
+  padding: 12px 26px; text-decoration: none; white-space: nowrap;
+  transition: background .18s ease, border-color .18s ease, color .18s ease, box-shadow .18s ease;
+}
+.catabs.hero-tabs .catab:hover {
+  background: #f0fdfa; border-color: #99f6e4; color: #0f766e;
+}
+.catabs.hero-tabs .catab.active {
+  background: #14b8a6; border-color: #14b8a6; color: #fff;
+  box-shadow: 0 6px 16px rgba(20, 184, 166, .28);
+}
+@media (max-width: 600px) {
+  .catabs.hero-tabs { gap: 7px; margin: 18px 0 8px; }
+  .catabs.hero-tabs .catab { font-size: 14px; padding: 10px 16px; }
+}
+@media (max-width: 520px) {
+  .hero, header.hd { padding: 22px 0 0; }
+  .hero h1, header.hd h1 { font-size: 27px; }
+  .hero .expand, header.hd .sub2 { font-size: 13px; }
+}
+@media (max-width: 380px) {
+  .catabs.hero-tabs .catab { font-size: 13px; padding: 9px 12px; }
+}
+/* ── seamless page change (cross-document view transition) ── */
+@view-transition { navigation: auto; }
+@keyframes odsFadeIn  { from { opacity: 0; } }
+@keyframes odsFadeOut { to   { opacity: 0; } }
+::view-transition-old(root) { animation: odsFadeOut .15s ease both; }
+::view-transition-new(root) { animation: odsFadeIn  .22s ease both; }
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
+  ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+}
+</style>
+<link rel="prefetch" href="index.html">
+<link rel="prefetch" href="mis.html">
+<link rel="prefetch" href="groups.html">
+<link rel="prefetch" href="docs.html">
+<link rel="prefetch" href="tables.html">
 </head>
 <body>
 
 <header class="hd">
   <div class="wrap">
-    <div class="hdrow">
-      <div>
-        <h1>กลุ่มโรค ODS/MIS · ICD-10 / ICD-9</h1>
-        <p class="sub">ตามประกาศ สปสช. การจ่ายค่าบริการ ODS และ MIS พ.ศ. ๒๕๖๗</p>
-      </div>
-      <a class="navlink" href="docs.html">📄 เอกสารอ้างอิง</a> <a class="navlink" href="index.html">← หน้าแรก ODS MIS</a>
-    </div>
+    <h1>กลุ่มโรค-รหัส</h1>
+    <p class="sub">ODS / MIS · Wanonniwat Hospital</p>
+    <p class="sub2">ตารางรหัส ICD-10 / ICD-9-CM · ตามประกาศ สปสช. พ.ศ. ๒๕๖๗</p>
+<nav class="catabs hero-tabs" aria-label="หมวดหน้า">
+  <a class="catab" href="./">ODS</a>
+  <a class="catab" href="mis.html">MIS</a>
+  <span class="catab active" aria-current="page">กลุ่มโรค-รหัส</span>
+  <a class="catab" href="docs.html">เอกสาร</a>
+</nav>
   </div>
 </header>
 
