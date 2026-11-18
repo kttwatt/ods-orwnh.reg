@@ -43,6 +43,8 @@ table.map { width: 100%; border-collapse: collapse; font-size: .88rem; margin-to
 table.map th, table.map td { border-bottom: 1px solid #eef0f4; padding: 10px 8px; text-align: left; vertical-align: top; }
 table.map th { color: #6b7280; font-weight: 700; font-size: .8rem; text-transform: none; white-space: nowrap; }
 table.map td.pg { white-space: nowrap; font-weight: 700; color: #0f9488; }
+table.map td.pg a { color: #0f9488; text-decoration: none; border-bottom: 1px dashed #9ee8e0; }
+table.map td.pg a::after { content: " ↗"; font-size: .78em; color: #14b8a6; }
 ul.clean { margin: 8px 0 0; padding-left: 20px; }
 ul.clean li { margin: 6px 0; }
 .kv { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 10px; margin-top: 12px; }
@@ -91,7 +93,8 @@ footer { margin-top: 42px; font-size: .82rem; color: #6b7280; border-top: 1px so
         ราชกิจจานุเบกษา เล่ม ๑๔๑ ตอนพิเศษ ๓๐๔ ง หน้า ๔๘–๑๑๐ · ประกาศ ณ วันที่ ๘ พฤศจิกายน ๒๕๖๗ · รวม ๖๓ หน้า
       </p>
       <p class="small">ใช้แทนประกาศฉบับเดิม (การผ่าตัดแบบไม่ค้างคืน / ผ่าตัดผ่านกล้อง) และเป็นฐานของทั้งหน้า ODS, MIS และหน้ากลุ่มโรค-รหัส บนเว็บนี้</p>
-      <a class="btn btn-dark" href="ods-mis-2567-announcement.pdf" download>⬇ ดาวน์โหลดประกาศ (PDF ๖๓ หน้า)</a>
+      <a class="btn btn-dark" href="ods-mis-2567-announcement.pdf" target="_blank" rel="noopener">📄 เปิดอ่านประกาศ (PDF ๖๓ หน้า)</a>
+      <a class="btn btn-line" href="ods-mis-2567-announcement.pdf" download>⬇ ดาวน์โหลดไฟล์ PDF</a>
       <a class="btn btn-line" href="https://ratchakitcha.soc.go.th/" target="_blank" rel="noopener">ค้นหาต้นฉบับที่ราชกิจจานุเบกษา</a>
       <p class="small muted" style="margin-top:10px">ไฟล์ PDF ในเว็บนี้เป็นสำเนาเพื่อการอ้างอิงภายในหน่วยงาน ต้นฉบับเผยแพร่ทางราชกิจจานุเบกษา</p>
     </div>
@@ -102,26 +105,27 @@ footer { margin-top: 42px; font-size: .82rem; color: #6b7280; border-top: 1px so
       <table class="map">
         <tr><th>ส่วน</th><th>หน้า</th><th>เนื้อหา</th></tr>
         <tr>
-          <td>หมวด ๑ · ODS</td><td class="pg">๔๘–๕๑</td>
+          <td>หมวด ๑ · ODS</td><td class="pg"><a href="ods-mis-2567-announcement.pdf#page=1" target="_blank" rel="noopener">๔๘–๕๑</a></td>
           <td>หลักเกณฑ์บริการผ่าตัดแบบวันเดียวกลับ และอัตราการจ่าย — ข้อ ๓ กำหนดว่าผู้รับบริการต้องไม่มีภาวะแทรกซ้อน มีรหัสโรค ICD-10 (2016) และรหัสหัตถการ ICD-9-CM (2015) ตามเอกสารหมายเลข ๒, มีจำนวนวันนอนตั้งแต่ ๒ ชั่วโมงแต่ไม่เกิน ๒๔ ชั่วโมง และจำหน่ายโดยแพทย์อนุญาต (Discharge Type with approval)</td>
         </tr>
         <tr>
-          <td>หมวด ๒ · MIS</td><td class="pg">๕๑–๕๕</td>
+          <td>หมวด ๒ · MIS</td><td class="pg"><a href="ods-mis-2567-announcement.pdf#page=4" target="_blank" rel="noopener">๕๑–๕๕</a></td>
           <td>หลักเกณฑ์บริการผ่าตัดแผลเล็ก (ข้อ ๑๓) และหลักฐานเวชระเบียนที่ต้องมี (ข้อ ๒๒) — บันทึกการผ่าตัดแผลเล็ก วินิจฉัยก่อน–หลังผ่าตัด สิ่งที่ตรวจพบ วิธีการผ่าตัด และค่าดัชนีมวลกายกรณีโรคอ้วน</td>
         </tr>
         <tr>
-          <td>เอกสารหมายเลข ๑</td><td class="pg">๕๕</td>
+          <td>เอกสารหมายเลข ๑</td><td class="pg"><a href="ods-mis-2567-announcement.pdf#page=8" target="_blank" rel="noopener">๕๕</a></td>
           <td>หลักเกณฑ์ศักยภาพหน่วยบริการ — ต้องผ่านการประเมินจากคณะกรรมการที่กระทรวงสาธารณสุขหรือที่สำนักงานกำหนด</td>
         </tr>
         <tr>
-          <td>เอกสารหมายเลข ๒ · ODS</td><td class="pg">๕๖–๙๘</td>
+          <td>เอกสารหมายเลข ๒ · ODS</td><td class="pg"><a href="ods-mis-2567-announcement.pdf#page=9" target="_blank" rel="noopener">๕๖–๙๘</a></td>
           <td>ตารางกลุ่มโรค รหัสโรค ICD-10 2016 และรหัสหัตถการ ICD-9-CM 2015 ของ ODS ๗๐ กลุ่ม</td>
         </tr>
         <tr>
-          <td>เอกสารหมายเลข ๒ · MIS</td><td class="pg">๙๙–๑๑๐</td>
+          <td>เอกสารหมายเลข ๒ · MIS</td><td class="pg"><a href="ods-mis-2567-announcement.pdf#page=52" target="_blank" rel="noopener">๙๙–๑๑๐</a></td>
           <td>ตารางกลุ่มโรค/รหัส ของ MIS ๒๓ กลุ่ม (เริ่มที่กลุ่ม ๑ โรคนิ่วในถุงน้ำดี)</td>
         </tr>
       </table>
+      <p class="small muted" style="margin:10px 0 0">แตะเลขหน้าเพื่อเปิดไฟล์ PDF ที่หน้านั้นโดยตรง — เลขหน้า PDF = เลขหน้าพิมพ์ − ๔๗ (หน้า ๑ ของไฟล์ = หน้าพิมพ์ ๔๘)</p>
     </div>
   </section>
 
@@ -190,6 +194,7 @@ footer { margin-top: 42px; font-size: .82rem; color: #6b7280; border-top: 1px so
     <h2>๖. ลิงก์หน่วยงาน</h2>
     <div class="card small">
       <ul class="clean">
+        <li><a href="ods-mis-2567-announcement.pdf" target="_blank" rel="noopener">ไฟล์ประกาศในเว็บนี้ (PDF ๖๓ หน้า)</a> — สำเนาเพื่ออ้างอิงภายในหน่วยงาน</li>
         <li><a href="https://ratchakitcha.soc.go.th/" target="_blank" rel="noopener">ราชกิจจานุเบกษา</a> — ต้นฉบับประกาศ</li>
         <li><a href="https://www.nhso.go.th/" target="_blank" rel="noopener">สำนักงานหลักประกันสุขภาพแห่งชาติ (สปสช.)</a> — ประกาศ/แนวทางที่เกี่ยวข้อง</li>
         <li><a href="groups.html">กลุ่มโรค-รหัส (เว็บนี้)</a> — ตารางรหัสพร้อมเลขหน้าอ้างอิง</li>
@@ -198,7 +203,7 @@ footer { margin-top: 42px; font-size: .82rem; color: #6b7280; border-top: 1px so
   </section>
 
   <footer>
-    หน้านี้รวบรวมเฉพาะเอกสารที่ใช้ยืนยันตัวเลขและรหัสบนเว็บ · อัปเดตล่าสุด ๘ พ.ย. ๒๕๖๙
+    หน้านี้รวบรวมเฉพาะเอกสารที่ใช้ยืนยันตัวเลขและรหัสบนเว็บ · อัปเดตล่าสุด ๑๗ พ.ย. ๒๕๖๙
   </footer>
 
 </div>
